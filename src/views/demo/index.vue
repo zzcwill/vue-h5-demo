@@ -4,6 +4,8 @@
       <div @click="toRouter(item)">{{ item.name }}</div>
       <div class="dot"></div>
     </div>
+    <div class="test1"></div>
+    <div class="van-test"></div>
   </div>
 </template>
 
@@ -105,5 +107,16 @@ export default {
   height: 1px;
   width: 100%;
   background-color: #eee;
+}
+.test1 {
+  margin: 10px 0;
+  width: 1px;
+  height: 1px;
+  background-color: blue;
+}
+.van-test {
+  width: 10px;
+  height: 10px;
+  background-color: red;
 }
 </style>

@@ -48,6 +48,7 @@ export default defineConfig({
           rootValue: 75,
           propList: ["*"],
           minPixelValue: 2,
+          selectorBlackList: [".van"],
         }),
       ],
     },
