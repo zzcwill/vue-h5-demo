@@ -1,10 +1,9 @@
 import Axios from "axios";
-import vue from "vue";
 import Qs from "qs";
 
 const http = Axios.create({
   // api的base_url
-  baseURL: "/api",
+  baseURL: '/api',
   timeout: 5000,
   headers: {
     //后端json

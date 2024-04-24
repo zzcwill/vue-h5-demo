@@ -27,8 +27,6 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
-    // 自定义中间件
-    middleware: [],
     // 是否开启自动刷新
     hmr: true,
     // 是否开启自动打开浏览器
