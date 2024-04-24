@@ -30,4 +30,5 @@
     "sass",
     "vue"
   ],
+  "js/ts.implicitProjectConfig.checkJs": true
 }

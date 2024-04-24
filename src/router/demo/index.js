@@ -1,23 +1,23 @@
-const demo = () => import("@/views/demo/index.vue");
+const demo = () => import("@/views/demo/index");
 
-const chart = () => import("@/views/demo/chart/chart.vue");
-const chart2 = () => import("@/views/demo/chart/chart2.vue");
-const chart3 = () => import("@/views/demo/chart/chart3.vue");
-const chart4 = () => import("@/views/demo/chart/chart4.vue");
+const chart = () => import("@/views/demo/chart/chart");
+const chart2 = () => import("@/views/demo/chart/chart2");
+const chart3 = () => import("@/views/demo/chart/chart3");
+const chart4 = () => import("@/views/demo/chart/chart4");
 
-const ajax = () => import("@/views/demo/ajax.vue");
-const store = () => import("@/views/demo/store.vue");
-const store2 = () => import("@/views/demo/store2.vue");
+const ajax = () => import("@/views/demo/ajax");
+const store = () => import("@/views/demo/store");
+const store2 = () => import("@/views/demo/store2");
 
-const filter = () => import("@/views/demo/filter.vue");
+const filter = () => import("@/views/demo/filter");
 
-const img = () => import("@/views/demo/img.vue");
+const img = () => import("@/views/demo/img");
 
-const ref = () => import("@/views/demo/ref.vue");
+const ref = () => import("@/views/demo/ref");
 
-const sync = () => import("@/views/demo/sync.vue");
+const sync = () => import("@/views/demo/sync");
 
-const popup = () => import("@/views/demo/popup.vue");
+const popup = () => import("@/views/demo/popup");
 
 const demoRoute = [
   {

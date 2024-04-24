@@ -5,7 +5,7 @@ import "amfe-flexible";
 // 引入全局过滤器
 import "@/filters";
 // 项目需要引入文件
-import App from "@/App.vue";
+import App from "@/App";
 import router from "@/router";
 import store from "@/store";
 // 引入字体库
