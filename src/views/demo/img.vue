@@ -13,20 +13,20 @@
 </template>
 
 <script>
-import img from "@/assets/common/1.jpg";
+import img from '@/assets/common/1.jpg';
 
 export default {
-  name: "ajax",
+  name: 'ajax',
   data() {
     return {
-      imgUrl: img,
+      imgUrl: img
     };
   },
   filters: {
     codeFilter: function (value) {
-      let arr = ["no", "yes"];
-      return arr[value] || "-";
-    },
+      let arr = ['no', 'yes'];
+      return arr[value] || '-';
+    }
   },
   created() {
     this.getData();
@@ -34,8 +34,8 @@ export default {
   mounted() {},
   destoryed() {},
   methods: {
-    async getData() {},
-  },
+    async getData() {}
+  }
 };
 </script>
 

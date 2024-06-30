@@ -1,20 +1,20 @@
 <template>
-  <div class="UserLogin">demo</div>
+  <div class="login">demo</div>
 </template>
 
 <script>
-import { topicsApi } from "@/api/user";
+import { topicsApi } from '@/api/user';
 
 export default {
-  name: "login",
+  name: 'login',
   data() {
     return {
       code: this.$route.query.code,
       user: {
-        phone: "",
-        idCard: "",
-        smsCode: "",
-      },
+        phone: '',
+        idCard: '',
+        smsCode: ''
+      }
     };
   },
   created() {
@@ -26,13 +26,13 @@ export default {
     async judgeUserIsBind() {
       let data = {
         page: 1,
-        tab: "good",
-        limit: 10,
+        tab: 'good',
+        limit: 10
       };
       let res = await topicsApi(data);
       console.info(res);
-    },
-  },
+    }
+  }
 };
 </script>
 

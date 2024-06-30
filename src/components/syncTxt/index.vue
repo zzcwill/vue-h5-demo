@@ -8,12 +8,12 @@
 </template>
 <script>
 export default {
-  name: "SyncTxt",
+  name: 'SyncTxt',
   props: {
     txt: {
       type: String,
-      default: "",
-    },
+      default: ''
+    }
   },
   data() {
     return {};
@@ -22,10 +22,10 @@ export default {
   mounted() {},
   methods: {
     changeAyncTxt() {
-      let txt = "test";
-      this.$emit("update:txt", txt);
-    },
-  },
+      let txt = 'test';
+      this.$emit('update:txt', txt);
+    }
+  }
 };
 </script>
 <style lang="less" scoped>

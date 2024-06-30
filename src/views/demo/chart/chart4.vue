@@ -3,18 +3,18 @@
 </template>
 
 <script>
-import { topicsApi } from "@/api/user";
-import * as echarts from "echarts";
+import { topicsApi } from '@/api/user';
+import * as echarts from 'echarts';
 
 export default {
-  name: "chart4",
+  name: 'chart4',
   data() {
     return {
-      domId: "chart4",
+      domId: 'chart4',
       chart: null,
-      colorArr: ["#E086CE", "#8184D6"],
-      seriesName: ["新车", "二手车"],
-      seriesData: [40, 60],
+      colorArr: ['#E086CE', '#8184D6'],
+      seriesName: ['新车', '二手车'],
+      seriesData: [40, 60]
     };
   },
   created() {},
@@ -36,89 +36,89 @@ export default {
     },
     setOptions() {
       let option = {
-        backgroundColor: "#FFF",
-        type: "pie",
+        backgroundColor: '#FFF',
+        type: 'pie',
         title: {
-          text: "公司放款笔数",
+          text: '公司放款笔数',
           textStyle: {
-            fontWeight: "normal",
+            fontWeight: 'normal',
             fontSize: 12,
-            color: "#333",
+            color: '#333'
           },
-          x: "center",
-          y: "center",
+          x: 'center',
+          y: 'center'
         },
         tooltip: {
           axisPointer: {
             lineStyle: {
-              color: "#FFF",
-            },
+              color: '#FFF'
+            }
           },
-          trigger: "item",
-          formatter: "{c} ({d}%)",
+          trigger: 'item',
+          formatter: '{c} ({d}%)'
         },
         legend: {
-          orient: "vertical",
+          orient: 'vertical',
           top: 100,
           right: 0,
-          icon: "circle",
+          icon: 'circle',
           itemWidth: 14,
           itemHeight: 5,
           itemGap: 13,
           textStyle: {
             fontSize: 12,
-            color: "#333",
-          },
+            color: '#333'
+          }
         },
         grid: {
           top: 60,
-          left: "2%",
-          right: "2%",
-          bottom: "2%",
-          containLabel: true,
+          left: '2%',
+          right: '2%',
+          bottom: '2%',
+          containLabel: true
         },
         series: [
           {
-            name: "",
-            type: "pie",
-            radius: ["50%", "70%"],
+            name: '',
+            type: 'pie',
+            radius: ['50%', '70%'],
             avoidLabelOverlap: false,
             label: {
-              show: false,
+              show: false
             },
             emphasis: {
               label: {
                 show: true,
-                fontSize: "12",
-                color: "#FFF",
-              },
+                fontSize: '12',
+                color: '#FFF'
+              }
             },
             itemStyle: {
               normal: {
-                color: "#333",
-              },
+                color: '#333'
+              }
             },
             labelLine: {
-              show: false,
+              show: false
             },
             data: [
               {
                 value: this.seriesData[0],
                 name: this.seriesName[0],
-                itemStyle: { color: this.colorArr[0] },
+                itemStyle: { color: this.colorArr[0] }
               },
               {
                 value: this.seriesData[1],
                 name: this.seriesName[1],
-                itemStyle: { color: this.colorArr[1] },
-              },
-            ],
-          },
-        ],
+                itemStyle: { color: this.colorArr[1] }
+              }
+            ]
+          }
+        ]
       };
       this.chart.setOption(option);
-    },
-  },
+    }
+  }
 };
 </script>
 

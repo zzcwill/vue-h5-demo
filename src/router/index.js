@@ -1,9 +1,9 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-import user from "@/router/user";
-import demo from "@/router/demo";
-import app from "@/router/app";
+import app from '@/router/app';
+import demo from '@/router/demo';
+import user from '@/router/user';
 
 Vue.use(VueRouter);
 
@@ -11,7 +11,7 @@ Vue.use(VueRouter);
 const constantRoutes = user.concat(demo, app);
 
 export default new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: import.meta.env.VITE_BASE_URL,
-  routes: constantRoutes,
+  routes: constantRoutes
 });

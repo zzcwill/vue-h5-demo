@@ -1,4 +1,4 @@
-import http from "@/utils/http";
+import http from '@/utils/http';
 
 // post-demo
 // export function login(data) {
@@ -43,8 +43,8 @@ import http from "@/utils/http";
 
 export function topicsApi(data) {
   return http({
-    url: "/topics",
-    method: "get",
-    params: data,
+    url: '/topics',
+    method: 'get',
+    params: data
   });
 }

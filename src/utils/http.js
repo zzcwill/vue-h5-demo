@@ -1,5 +1,5 @@
-import Axios from "axios";
-import Qs from "qs";
+import Axios from 'axios';
+import Qs from 'qs';
 
 const http = Axios.create({
   // api的base_url
@@ -9,15 +9,15 @@ const http = Axios.create({
     //后端json
     //  'Content-Type': 'application/json;charset=UTF-8'
     //后端表单
-    "Content-Type": "application/x-www-form-urlencoded",
+    'Content-Type': 'application/x-www-form-urlencoded'
   },
   //后端表单application/x-www-form-urlencoded的参数转对象
   transformRequest: [
     function (data) {
       data = Qs.stringify(data);
       return data;
-    },
-  ],
+    }
+  ]
 });
 
 // 设置请求头

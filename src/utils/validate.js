@@ -1,6 +1,6 @@
 // 是否为空检验
 export function isEmpty(str) {
-  if (str === "") {
+  if (str === '') {
     return false;
   }
   return true;
@@ -21,46 +21,46 @@ export function isSixNumberCode(str) {
 // 是否身份证号码
 export function isIdCard(str) {
   const vcity = {
-    11: "北京",
-    12: "天津",
-    13: "河北",
-    14: "山西",
-    15: "内蒙古",
-    21: "辽宁",
-    22: "吉林",
-    23: "黑龙江",
-    31: "上海",
-    32: "江苏",
-    33: "浙江",
-    34: "安徽",
-    35: "福建",
-    36: "江西",
-    37: "山东",
-    41: "河南",
-    42: "湖北",
-    43: "湖南",
-    44: "广东",
-    45: "广西",
-    46: "海南",
-    50: "重庆",
-    51: "四川",
-    52: "贵州",
-    53: "云南",
-    54: "西藏",
-    61: "陕西",
-    62: "甘肃",
-    63: "青海",
-    64: "宁夏",
-    65: "新疆",
-    71: "台湾",
-    81: "香港",
-    82: "澳门",
-    91: "国外",
+    11: '北京',
+    12: '天津',
+    13: '河北',
+    14: '山西',
+    15: '内蒙古',
+    21: '辽宁',
+    22: '吉林',
+    23: '黑龙江',
+    31: '上海',
+    32: '江苏',
+    33: '浙江',
+    34: '安徽',
+    35: '福建',
+    36: '江西',
+    37: '山东',
+    41: '河南',
+    42: '湖北',
+    43: '湖南',
+    44: '广东',
+    45: '广西',
+    46: '海南',
+    50: '重庆',
+    51: '四川',
+    52: '贵州',
+    53: '云南',
+    54: '西藏',
+    61: '陕西',
+    62: '甘肃',
+    63: '青海',
+    64: '宁夏',
+    65: '新疆',
+    71: '台湾',
+    81: '香港',
+    82: '澳门',
+    91: '国外'
   };
 
   function checkCard(card) {
     //是否为空
-    if (card === "") {
+    if (card === '') {
       return false;
     }
     //校验长度，类型
@@ -106,23 +106,23 @@ export function isIdCard(str) {
   function checkBirthday(card) {
     let len = card.length;
     //身份证15位时，次序为省（3位）市（3位）年（2位）月（2位）日（2位）校验位（3位），皆为数字
-    if (len == "15") {
+    if (len == '15') {
       let re_fifteen = /^(\d{6})(\d{2})(\d{2})(\d{2})(\d{3})$/;
       let arr_data = card.match(re_fifteen);
       let year = arr_data[2];
       let month = arr_data[3];
       let day = arr_data[4];
-      let birthday = new Date("19" + year + "/" + month + "/" + day);
-      return verifyBirthday("19" + year, month, day, birthday);
+      let birthday = new Date('19' + year + '/' + month + '/' + day);
+      return verifyBirthday('19' + year, month, day, birthday);
     }
     //身份证18位时，次序为省（3位）市（3位）年（4位）月（2位）日（2位）校验位（4位），校验位末尾可能为X
-    if (len == "18") {
+    if (len == '18') {
       let re_eighteen = /^(\d{6})(\d{4})(\d{2})(\d{2})(\d{3})([0-9]|X)$/;
       let arr_data = card.match(re_eighteen);
       let year = arr_data[2];
       let month = arr_data[3];
       let day = arr_data[4];
-      let birthday = new Date(year + "/" + month + "/" + day);
+      let birthday = new Date(year + '/' + month + '/' + day);
       return verifyBirthday(year, month, day, birthday);
     }
     return false;
@@ -133,11 +133,7 @@ export function isIdCard(str) {
     let now = new Date();
     let now_year = now.getFullYear();
     //年月日是否合理
-    if (
-      birthday.getFullYear() == year &&
-      birthday.getMonth() + 1 == month &&
-      birthday.getDate() == day
-    ) {
+    if (birthday.getFullYear() == year && birthday.getMonth() + 1 == month && birthday.getDate() == day) {
       //判断年份的范围（3岁到100岁之间)
       let time = now_year - year;
       if (time >= 3 && time <= 100) {
@@ -153,39 +149,9 @@ export function isIdCard(str) {
     //15位转18位
     card = changeFivteenToEighteen(card);
     let len = card.length;
-    if (len == "18") {
-      let arrInt = new Array(
-        7,
-        9,
-        10,
-        5,
-        8,
-        4,
-        2,
-        1,
-        6,
-        3,
-        7,
-        9,
-        10,
-        5,
-        8,
-        4,
-        2
-      );
-      let arrCh = new Array(
-        "1",
-        "0",
-        "X",
-        "9",
-        "8",
-        "7",
-        "6",
-        "5",
-        "4",
-        "3",
-        "2"
-      );
+    if (len == '18') {
+      let arrInt = new Array(7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2);
+      let arrCh = new Array('1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2');
       let cardTemp = 0;
       let i;
       let valnum;
@@ -204,42 +170,12 @@ export function isIdCard(str) {
 
   //15位转18位身份证号
   function changeFivteenToEighteen(card) {
-    if (card.length == "15") {
-      let arrInt = new Array(
-        7,
-        9,
-        10,
-        5,
-        8,
-        4,
-        2,
-        1,
-        6,
-        3,
-        7,
-        9,
-        10,
-        5,
-        8,
-        4,
-        2
-      );
-      let arrCh = new Array(
-        "1",
-        "0",
-        "X",
-        "9",
-        "8",
-        "7",
-        "6",
-        "5",
-        "4",
-        "3",
-        "2"
-      );
+    if (card.length == '15') {
+      let arrInt = new Array(7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2);
+      let arrCh = new Array('1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2');
       let cardTemp = 0;
       let i;
-      card = card.substr(0, 6) + "19" + card.substr(6, card.length - 6);
+      card = card.substr(0, 6) + '19' + card.substr(6, card.length - 6);
       for (i = 0; i < 17; i++) {
         cardTemp += card.substr(i, 1) * arrInt[i];
       }
@@ -255,6 +191,6 @@ export function isIdCard(str) {
 //  是否微信端
 export function isWechat() {
   let u = navigator.userAgent;
-  let wechat = u.indexOf("MicroMessenger") > -1;
+  let wechat = u.indexOf('MicroMessenger') > -1;
   return wechat;
 }

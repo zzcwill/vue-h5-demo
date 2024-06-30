@@ -3,13 +3,13 @@
 </template>
 
 <script>
-import { topicsApi } from "@/api/user";
+import { topicsApi } from '@/api/user';
 
 export default {
-  name: "ajax",
+  name: 'ajax',
   data() {
     return {
-      code: this.$route.query.code,
+      code: this.$route.query.code
     };
   },
   created() {
@@ -22,13 +22,13 @@ export default {
     async getData() {
       let data = {
         page: 1,
-        tab: "good",
-        limit: 10,
+        tab: 'good',
+        limit: 10
       };
       let res = await topicsApi(data);
       console.info(res);
-    },
-  },
+    }
+  }
 };
 </script>
 

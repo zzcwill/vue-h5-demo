@@ -3,32 +3,25 @@
 </template>
 
 <script>
-import { topicsApi } from "@/api/user";
-import * as echarts from "echarts";
+import { topicsApi } from '@/api/user';
+import * as echarts from 'echarts';
 
 export default {
-  name: "chart",
+  name: 'chart',
   data() {
     return {
-      domId: "chart",
+      domId: 'chart',
       chart: null,
-      colorArr: ["#86D9E0", "#E086CE", "#8184D6"],
-      seriesName: ["发起", "完成", "通过"],
-      xAxisData: [
-        "2022-06",
-        "22022-07",
-        "2022-08",
-        "2022-09",
-        "2022-10",
-        "2022-11",
-      ],
+      colorArr: ['#86D9E0', '#E086CE', '#8184D6'],
+      seriesName: ['发起', '完成', '通过'],
+      xAxisData: ['2022-06', '22022-07', '2022-08', '2022-09', '2022-10', '2022-11'],
       // xAxisData: ['2022-06','22022-07','2022-08','2022-09','2022-10','2022-11'],
-      yAxisName: "笔数",
+      yAxisName: '笔数',
       seriesData: [
         [0, 20, 15, 40, 50, 70],
         [0, 10, 15, 20, 25, 30],
-        [0, 4, 15, 8, 10, 10],
-      ],
+        [0, 4, 15, 8, 10, 10]
+      ]
     };
   },
   created() {},
@@ -50,158 +43,158 @@ export default {
     },
     setOptions() {
       let option = {
-        backgroundColor: "#FFF",
+        backgroundColor: '#FFF',
         // 表格标题
         title: {
           top: 20,
-          text: "",
+          text: '',
           textStyle: {
-            fontWeight: "normal",
+            fontWeight: 'normal',
             fontSize: 12,
-            color: "#333",
+            color: '#333'
           },
-          left: "1%",
+          left: '1%'
         },
         // 点击-提示信息
         tooltip: {
-          trigger: "axis",
+          trigger: 'axis',
           axisPointer: {
             lineStyle: {
-              color: "#FFF",
-            },
-          },
+              color: '#FFF'
+            }
+          }
         },
         // 右上角标题
         legend: {
           top: 10,
-          icon: "circle",
+          icon: 'circle',
           itemWidth: 14,
           itemHeight: 5,
           itemGap: 13,
-          right: "4%",
+          right: '4%',
           textStyle: {
             fontSize: 12,
-            color: "#333",
-          },
+            color: '#333'
+          }
         },
         // 折线图形-距离顶部的配置
         grid: {
           top: 60,
-          left: "2%",
-          right: "2%",
-          bottom: "2%",
-          containLabel: true,
+          left: '2%',
+          right: '2%',
+          bottom: '2%',
+          containLabel: true
         },
         xAxis: [
           {
-            type: "category",
+            type: 'category',
             boundaryGap: true,
             // x轴刻度线
             axisTick: {
-              show: false,
+              show: false
             },
             axisLine: {
               show: true,
               lineStyle: {
-                color: "#E5E5E5",
-              },
+                color: '#E5E5E5'
+              }
             },
             axisLabel: {
               margin: 10,
               textStyle: {
                 fontSize: 12,
-                color: "#333",
-              },
+                color: '#333'
+              }
             },
-            data: this.xAxisData,
-          },
+            data: this.xAxisData
+          }
         ],
         yAxis: [
           {
-            type: "value",
+            type: 'value',
             name: this.yAxisName,
             // y轴刻度线
             axisTick: {
-              show: false,
+              show: false
             },
             axisLine: {
               show: false,
               lineStyle: {
-                color: "#333",
-              },
+                color: '#333'
+              }
             },
             axisLabel: {
               margin: 10,
               textStyle: {
                 fontSize: 12,
-                color: "#333",
-              },
-            },
-          },
+                color: '#333'
+              }
+            }
+          }
         ],
         series: [
           {
             name: this.seriesName[0],
-            type: "line",
-            symbol: "circle",
+            type: 'line',
+            symbol: 'circle',
             symbolSize: 4,
             showSymbol: true,
             lineStyle: {
               normal: {
-                width: 1,
-              },
+                width: 1
+              }
             },
             itemStyle: {
               normal: {
                 color: this.colorArr[0],
-                borderColor: this.colorArr[0],
-              },
+                borderColor: this.colorArr[0]
+              }
             },
-            data: this.seriesData[0],
+            data: this.seriesData[0]
           },
           {
             name: this.seriesName[1],
-            type: "line",
-            symbol: "circle",
+            type: 'line',
+            symbol: 'circle',
             symbolSize: 4,
             showSymbol: true,
             lineStyle: {
               normal: {
-                width: 1,
-              },
+                width: 1
+              }
             },
             itemStyle: {
               normal: {
                 color: this.colorArr[1],
-                borderColor: this.colorArr[1],
-              },
+                borderColor: this.colorArr[1]
+              }
             },
-            data: this.seriesData[1],
+            data: this.seriesData[1]
           },
           {
             name: this.seriesName[2],
-            type: "line",
-            symbol: "circle",
+            type: 'line',
+            symbol: 'circle',
             symbolSize: 4,
             showSymbol: true,
             lineStyle: {
               normal: {
-                width: 1,
-              },
+                width: 1
+              }
             },
             itemStyle: {
               normal: {
                 color: this.colorArr[2],
-                borderColor: this.colorArr[2],
-              },
+                borderColor: this.colorArr[2]
+              }
             },
-            data: this.seriesData[2],
-          },
-        ],
+            data: this.seriesData[2]
+          }
+        ]
       };
       this.chart.setOption(option);
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -5,23 +5,23 @@
 </template>
 
 <script>
-import syncTxt from "@/components/syncTxt";
+import syncTxt from '@/components/syncTxt';
 
 export default {
-  name: "sync",
+  name: 'sync',
   data() {
     return {
-      txt: "zzc",
+      txt: 'zzc'
     };
   },
   components: {
-    syncTxt,
+    syncTxt
   },
   filters: {},
   created() {},
   mounted() {},
   destoryed() {},
-  methods: {},
+  methods: {}
 };
 </script>
 

@@ -1,15 +1,12 @@
 /* eslint-env node */
-require("@rushstack/eslint-patch/modern-module-resolution");
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
   root: true,
-  extends: [
-    "plugin:vue/essential",
-    "eslint:recommended",
-    "@vue/eslint-config-prettier",
-  ],
+  extends: ['eslint:recommended', 'plugin:vue/essential', 'prettier', 'plugin:prettier/recommended'],
   rules: {
-    "vue/multi-word-component-names": "off",
-    "no-unused-vars": "off",
-  },
+    'prettier/prettier': ['error', require('./.prettierrc.js')],
+    'vue/multi-word-component-names': 'off',
+    'no-unused-vars': 'off'
+  }
 };

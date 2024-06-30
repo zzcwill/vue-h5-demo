@@ -1,7 +1,7 @@
-import router from "@/router";
+import router from '@/router';
 
 router.beforeEach((to, from, next) => {
-  console.info("permission");
+  console.info('permission');
   next();
 });
 

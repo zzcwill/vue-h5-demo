@@ -12,17 +12,17 @@
 
 <script>
 export default {
-  name: "ajax",
+  name: 'ajax',
   data() {
     return {
-      code: 1,
+      code: 1
     };
   },
   filters: {
     codeFilter: function (value) {
-      let arr = ["no", "yes"];
-      return arr[value] || "-";
-    },
+      let arr = ['no', 'yes'];
+      return arr[value] || '-';
+    }
   },
   created() {
     this.getData();
@@ -30,8 +30,8 @@ export default {
   mounted() {},
   destoryed() {},
   methods: {
-    async getData() {},
-  },
+    async getData() {}
+  }
 };
 </script>
 

@@ -1,13 +1,11 @@
-# vue-h5
-> A vue-h5-demo project
+# vue-h5-demo
+> vue-h5-demo
 
-### node
-16.14.0
+# node
+- node >= 18 
+- nvm use 18.20.2
 
-### 项目运行
-- yarn install
-- yarn dev
-- yarn build
-- 打包预览
-- yarn preview
-- yarn lint
+# dev
+- pnpm i
+- pnpm dev
+- pnpm build

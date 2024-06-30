@@ -3,31 +3,23 @@
 </template>
 
 <script>
-import { topicsApi } from "@/api/user";
-import * as echarts from "echarts";
+import { topicsApi } from '@/api/user';
+import * as echarts from 'echarts';
 
 export default {
-  name: "chart2",
+  name: 'chart2',
   data() {
     return {
-      domId: "chart2",
+      domId: 'chart2',
       chart: null,
-      colorArr: ["#E086CE", "#8184D6"],
-      seriesName: ["征信平均时效", "签约平均时效"],
-      xAxisData: [
-        "11-01",
-        "11-02",
-        "11-03",
-        "11-04",
-        "11-05",
-        "11-06",
-        "11-07",
-      ],
-      yAxisName: "平均分钟",
+      colorArr: ['#E086CE', '#8184D6'],
+      seriesName: ['征信平均时效', '签约平均时效'],
+      xAxisData: ['11-01', '11-02', '11-03', '11-04', '11-05', '11-06', '11-07'],
+      yAxisName: '平均分钟',
       seriesData: [
         [0, 20, 15, 40, 50, 70, 100],
-        [0, 10, 15, 20, 25, 30, 40],
-      ],
+        [0, 10, 15, 20, 25, 30, 40]
+      ]
     };
   },
   created() {},
@@ -49,120 +41,120 @@ export default {
     },
     setOptions() {
       let option = {
-        backgroundColor: "#FFF",
+        backgroundColor: '#FFF',
         title: {
           top: 20,
-          text: "",
+          text: '',
           textStyle: {
-            fontWeight: "normal",
+            fontWeight: 'normal',
             fontSize: 12,
-            color: "#333",
+            color: '#333'
           },
-          left: "1%",
+          left: '1%'
         },
         tooltip: {
-          trigger: "axis",
+          trigger: 'axis',
           axisPointer: {
             lineStyle: {
-              color: "#FFF",
-            },
-          },
+              color: '#FFF'
+            }
+          }
         },
         legend: {
           top: 10,
-          icon: "circle",
+          icon: 'circle',
           itemWidth: 14,
           itemHeight: 5,
           itemGap: 13,
-          right: "4%",
+          right: '4%',
           textStyle: {
             fontSize: 12,
-            color: "#333",
-          },
+            color: '#333'
+          }
         },
         grid: {
           top: 60,
-          left: "2%",
-          right: "2%",
-          bottom: "2%",
-          containLabel: true,
+          left: '2%',
+          right: '2%',
+          bottom: '2%',
+          containLabel: true
         },
         xAxis: [
           {
-            type: "category",
+            type: 'category',
             data: this.xAxisData,
             axisTick: {
-              show: false,
+              show: false
             },
             axisLine: {
               show: false,
               lineStyle: {
-                color: "#E5E5E5",
-              },
+                color: '#E5E5E5'
+              }
             },
             axisLabel: {
               margin: 10,
               textStyle: {
                 fontSize: 12,
-                color: "#333",
-              },
-            },
-          },
+                color: '#333'
+              }
+            }
+          }
         ],
         yAxis: [
           {
-            type: "value",
+            type: 'value',
             name: this.yAxisName,
             axisTick: {
-              show: false,
+              show: false
             },
             axisLine: {
               show: false,
               lineStyle: {
-                color: "#333",
-              },
+                color: '#333'
+              }
             },
             axisLabel: {
               margin: 10,
               textStyle: {
                 fontSize: 12,
-                color: "#333",
-              },
-            },
-          },
+                color: '#333'
+              }
+            }
+          }
         ],
         series: [
           {
             name: this.seriesName[0],
-            type: "bar",
-            stack: "vistors",
-            barWidth: "30%",
+            type: 'bar',
+            stack: 'vistors',
+            barWidth: '30%',
             itemStyle: {
               normal: {
                 color: this.colorArr[0],
-                borderColor: this.colorArr[0],
-              },
+                borderColor: this.colorArr[0]
+              }
             },
-            data: this.seriesData[0],
+            data: this.seriesData[0]
           },
           {
             name: this.seriesName[1],
-            type: "bar",
-            stack: "vistors",
-            barWidth: "30%",
+            type: 'bar',
+            stack: 'vistors',
+            barWidth: '30%',
             itemStyle: {
               normal: {
                 color: this.colorArr[1],
-                borderColor: this.colorArr[1],
-              },
+                borderColor: this.colorArr[1]
+              }
             },
-            data: this.seriesData[1],
-          },
-        ],
+            data: this.seriesData[1]
+          }
+        ]
       };
       this.chart.setOption(option);
-    },
-  },
+    }
+  }
 };
 </script>
 

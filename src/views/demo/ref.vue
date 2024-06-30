@@ -2,35 +2,28 @@
   <div>
     <record ref="refRecord" />
 
-    <div
-      class="m-t-10 text-c"
-      @click="getRecord"
-      ref="refRecordTxt"
-      data-id="txt"
-    >
-      getRecord
-    </div>
+    <div class="m-t-10 text-c" @click="getRecord" ref="refRecordTxt" data-id="txt">getRecord</div>
   </div>
 </template>
 
 <script>
-import record from "@/components/record";
+import record from '@/components/record';
 
 export default {
-  name: "refPage",
+  name: 'refPage',
   data() {
     return {
-      code: 1,
+      code: 1
     };
   },
   components: {
-    record,
+    record
   },
   filters: {
     codeFilter: function (value) {
-      let arr = ["no", "yes"];
-      return arr[value] || "-";
-    },
+      let arr = ['no', 'yes'];
+      return arr[value] || '-';
+    }
   },
   created() {},
   mounted() {},
@@ -40,14 +33,14 @@ export default {
       // 获取dom
       console.info(this.$refs.refRecordTxt);
       console.info(this.$refs.refRecordTxt.innerText);
-      console.info(this.$refs.refRecordTxt.getAttribute("class"));
-      console.info(this.$refs.refRecordTxt.getAttribute("data-id"));
-      console.info("----");
+      console.info(this.$refs.refRecordTxt.getAttribute('class'));
+      console.info(this.$refs.refRecordTxt.getAttribute('data-id'));
+      console.info('----');
       // 获取子组件方法
       this.$refs.refRecord.getData();
       console.info(this.$refs.refRecord.numData);
-    },
-  },
+    }
+  }
 };
 </script>
 

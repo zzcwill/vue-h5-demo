@@ -11,75 +11,75 @@
 
 <script>
 export default {
-  name: "demo",
+  name: 'demo',
   components: {},
   data() {
     return {
       routes: [
         {
-          name: "chart",
-          path: "/demo/chart",
-          query: {},
+          name: 'chart',
+          path: '/demo/chart',
+          query: {}
         },
         {
-          name: "chart2",
-          path: "/demo/chart2",
-          query: {},
+          name: 'chart2',
+          path: '/demo/chart2',
+          query: {}
         },
         {
-          name: "chart3",
-          path: "/demo/chart3",
-          query: {},
+          name: 'chart3',
+          path: '/demo/chart3',
+          query: {}
         },
         {
-          name: "chart4",
-          path: "/demo/chart4",
-          query: {},
+          name: 'chart4',
+          path: '/demo/chart4',
+          query: {}
         },
 
         {
-          name: "ajax",
-          path: "/demo/ajax",
+          name: 'ajax',
+          path: '/demo/ajax',
           query: {
-            code: "test",
-          },
+            code: 'test'
+          }
         },
         {
-          name: "store",
-          path: "/demo/store",
-          query: {},
+          name: 'store',
+          path: '/demo/store',
+          query: {}
         },
         {
-          name: "store2",
-          path: "/demo/store2",
-          query: {},
+          name: 'store2',
+          path: '/demo/store2',
+          query: {}
         },
         {
-          name: "filter",
-          path: "/demo/filter",
-          query: {},
+          name: 'filter',
+          path: '/demo/filter',
+          query: {}
         },
         {
-          name: "img",
-          path: "/demo/img",
-          query: {},
+          name: 'img',
+          path: '/demo/img',
+          query: {}
         },
         {
-          name: "ref",
-          path: "/demo/ref",
-          query: {},
+          name: 'ref',
+          path: '/demo/ref',
+          query: {}
         },
         {
-          name: "sync",
-          path: "/demo/sync",
-          query: {},
+          name: 'sync',
+          path: '/demo/sync',
+          query: {}
         },
         {
-          name: "popup",
-          path: "/demo/popup",
-          query: {},
-        },
-      ],
+          name: 'popup',
+          path: '/demo/popup',
+          query: {}
+        }
+      ]
     };
   },
   created() {},
@@ -87,8 +87,8 @@ export default {
   methods: {
     toRouter(item) {
       this.$router.push({ path: item.path, query: item.query });
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="less" scoped>

@@ -1,14 +1,14 @@
-import { topicsApi } from "@/api/user";
+import { topicsApi } from '@/api/user';
 
 const user = {
   state: {
-    userInfo: "",
+    userInfo: ''
   },
 
   mutations: {
     user_info: (state, userData) => {
       state.userInfo = userData;
-    },
+    }
   },
 
   actions: {
@@ -16,15 +16,15 @@ const user = {
     async user_info({ commit }, userData) {
       let res = await topicsApi(userData);
       res = {
-        username: "zzc",
-        phone: "18042434280",
-        token: "123456",
+        username: 'zzc',
+        phone: '18042434280',
+        token: '123456'
       };
       let userInfoStr = JSON.stringify(res);
-      commit("user_info", userInfoStr);
+      commit('user_info', userInfoStr);
       return res;
-    },
-  },
+    }
+  }
 };
 
 export default user;

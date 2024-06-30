@@ -7,19 +7,19 @@
 </template>
 
 <script>
-import popup from "@/components/popup";
+import popup from '@/components/popup';
 
 export default {
-  name: "PopupPage",
+  name: 'PopupPage',
   data() {
     return {
-      title: "title",
-      text: "text",
-      txt: "father",
+      title: 'title',
+      text: 'text',
+      txt: 'father'
     };
   },
   components: {
-    popup,
+    popup
   },
   filters: {},
   created() {},
@@ -34,8 +34,8 @@ export default {
     },
     changePopup() {
       this.$refs.refPopup.changeVisible();
-    },
-  },
+    }
+  }
 };
 </script>
 

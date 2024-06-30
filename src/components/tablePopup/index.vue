@@ -18,24 +18,24 @@
 
 <script>
 export default {
-  name: "TablePopup",
+  name: 'TablePopup',
   props: {
     title: {
       type: String,
-      default: "popupTitle",
+      default: 'popupTitle'
     },
     text: {
       type: String,
-      default: "popupText",
+      default: 'popupText'
     },
     callBack: {
       type: Function,
-      default: () => {},
-    },
+      default: () => {}
+    }
   },
   data() {
     return {
-      visible: false,
+      visible: false
     };
   },
   methods: {
@@ -51,8 +51,8 @@ export default {
     sure() {
       this.visible = false;
       this.callBack();
-    },
-  },
+    }
+  }
 };
 </script>
 

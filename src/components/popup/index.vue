@@ -15,24 +15,24 @@
 
 <script>
 export default {
-  name: "Popup2",
+  name: 'Popup2',
   props: {
     title: {
       type: String,
-      default: "popupTitle",
+      default: 'popupTitle'
     },
     text: {
       type: String,
-      default: "popupText",
+      default: 'popupText'
     },
     callBack: {
       type: Function,
-      default: () => {},
-    },
+      default: () => {}
+    }
   },
   data() {
     return {
-      visible: false,
+      visible: false
     };
   },
   methods: {
@@ -48,11 +48,11 @@ export default {
     sure() {
       this.visible = false;
       this.callBack();
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="less">
-@import "index.less";
+@import 'index.less';
 </style>
