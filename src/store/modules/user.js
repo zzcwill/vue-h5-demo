@@ -2,27 +2,37 @@ import { topicsApi } from '@/api/user';
 
 const user = {
   state: {
-    userInfo: ''
+    userInfo: {
+      username: '',
+      phone: '',
+      token: ''
+    }
   },
 
   mutations: {
-    user_info: (state, userData) => {
+    userInfo: (state, userData) => {
       state.userInfo = userData;
     }
   },
 
   actions: {
     //设置用户信息
-    async user_info({ commit }, userData) {
-      let res = await topicsApi(userData);
-      res = {
+    async actionByUserInfo({ commit }, data) {
+      const paramData = {
+        page: 1,
+        tab: 'good',
+        limit: 10
+      };
+
+      let resData = await topicsApi(paramData);
+      resData = {
         username: 'zzc',
         phone: '18042434280',
-        token: '123456'
+        token: 'token'
       };
-      let userInfoStr = JSON.stringify(res);
-      commit('user_info', userInfoStr);
-      return res;
+      console.info('userInfo', resData);
+      commit('userInfo', resData);
+      return resData;
     }
   }
 };

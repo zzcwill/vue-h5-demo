@@ -8,7 +8,7 @@
 </template>
 <script>
 export default {
-  name: 'SyncTxt',
+  name: 'syncTxt',
   props: {
     txt: {
       type: String,
@@ -39,7 +39,7 @@ export default {
 }
 .item span {
   margin-left: 6px;
-  font-size: 13px;
+  font-size: 24px;
   color: #feab1a;
 }
 </style>

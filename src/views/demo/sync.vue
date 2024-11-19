@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sync-txt :txt.sync="txt" />
+    <syncTxt :txt.sync="txt" />
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
   filters: {},
   created() {},
   mounted() {},
-  destoryed() {},
+  destroyed() {},
   methods: {}
 };
 </script>

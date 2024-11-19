@@ -33,7 +33,7 @@ export default {
     this.chart.dispose();
     this.chart = null;
   },
-  destoryed() {},
+  destroyed() {},
   methods: {
     initChart() {
       this.chart = echarts.init(document.getElementById(this.domId));
@@ -46,7 +46,7 @@ export default {
           top: 20,
           text: '',
           textStyle: {
-            fontWeight: 'normal',
+            // fontWeight: 'normal',
             fontSize: 12,
             color: '#333'
           },

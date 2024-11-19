@@ -1,4 +1,4 @@
-import http from '@/utils/http';
+import http from '@/api/http';
 
 // post-demo
 // export function login(data) {

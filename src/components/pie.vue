@@ -106,7 +106,7 @@ export default {
         title: {
           text: this.titleName,
           textStyle: {
-            fontWeight: 'normal',
+            // fontWeight: 'normal',
             fontSize: 12
             // color: '#fff',
           },
@@ -152,7 +152,7 @@ export default {
               // color: '#fff',
             },
             itemStyle: {
-              fontWeight: 'normal',
+              // fontWeight: 'normal',
               normal: {
                 // color: '#fff',
               }

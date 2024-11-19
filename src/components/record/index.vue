@@ -75,12 +75,12 @@ export default {
   justify-content: center;
 }
 .item {
-  margin-right: 30px;
+  margin-right: 12px;
   color: #059f87;
 }
 .item span {
   margin-left: 6px;
-  font-size: 13px;
+  font-size: 24px;
   color: #feab1a;
 }
 </style>

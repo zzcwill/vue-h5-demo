@@ -1,17 +1,19 @@
 const app = {
   state: {
-    sysname: 'app'
+    appInfo: {
+      name: 'app'
+    }
   },
 
   mutations: {
-    app_sysname: (state, sysname) => {
-      state.sysname = sysname;
+    appInfo: (state, appInfo) => {
+      state.appInfo = appInfo;
     }
   },
 
   actions: {
-    app_sysname({ commit }, sysname) {
-      commit('app_sysname', sysname);
+    actionByAppInfo({ commit }, appInfo) {
+      commit('appInfo', appInfo);
     }
   }
 };

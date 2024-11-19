@@ -3,15 +3,14 @@ import VueRouter from 'vue-router';
 
 import app from '@/router/app';
 import demo from '@/router/demo';
-import user from '@/router/user';
 
 Vue.use(VueRouter);
 
 // 后续可添加模块
-const constantRoutes = user.concat(demo, app);
+const constantRoutes = demo.concat(app);
 
 export default new VueRouter({
   mode: 'history',
-  base: import.meta.env.VITE_BASE_URL,
+  base: '/h5',
   routes: constantRoutes
 });

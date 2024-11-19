@@ -1,51 +1,55 @@
 <template>
-  <div>store</div>
+  <div>
+    <div>store</div>
+    <div>userInfo.token</div>
+    <div>{{ userInfo.token }}</div>
+    <div>userInfo2.token</div>
+    <div>{{ userInfo2.token }}</div>
+    <div>appInfo.name</div>
+    <div>{{ appInfo.name }}</div>
+    <br />
+    <div>filter</div>
+    <div>{{ code }}</div>
+    <div>{{ code | codeFilter }}</div>
+    <!-- 全局过滤器直接使用 -->
+    <div>{{ code | buyfilter }}</div>
+  </div>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
-// import { topicsApi } from '@/api/user'
+import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'store',
   data() {
-    return {};
+    return {
+      code: 1
+    };
   },
   computed: {
-    ...mapGetters(['sysname', 'userInfo']),
-    sysname2() {
-      return this.$store.state.app.sysname;
-    },
+    ...mapGetters(['userInfo']),
     userInfo2() {
-      let userInfo = this.$store.state.user.userInfo;
-      if (userInfo === '') {
-        return {};
-      } else {
-        return JSON.parse(userInfo);
-      }
+      return this.$store.state.user.userInfo;
+    },
+    ...mapState({
+      appInfo: (state) => state.app.appInfo
+    })
+  },
+  filters: {
+    codeFilter: function (value) {
+      let arr = ['no', 'yes'];
+      return arr[value] || '-';
     }
   },
   created() {
-    console.info(this.sysname);
-    console.info(this.sysname2);
-    this.getUserInfo();
+    this.actionByAppInfo({
+      name: 'appTest'
+    });
   },
   mounted() {},
-  destoryed() {},
+  destroyed() {},
   methods: {
-    async getUserInfo() {
-      let data = {
-        page: 1,
-        tab: 'good',
-        limit: 10
-      };
-      let res = await this.$store.dispatch('user_info', data);
-      console.info('-----');
-      console.info(res);
-      console.info(this.userInfo);
-      console.info(this.userInfo2);
-      console.info(this.$store.state.user.userInfo);
-    }
+    ...mapActions(['actionByAppInfo'])
   }
 };
 </script>

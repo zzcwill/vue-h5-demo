@@ -28,7 +28,7 @@ export default {
     this.chart.dispose();
     this.chart = null;
   },
-  destoryed() {},
+  destroyed() {},
   methods: {
     initChart() {
       this.chart = echarts.init(document.getElementById(this.domId));
@@ -41,7 +41,7 @@ export default {
         title: {
           text: '公司放款笔数',
           textStyle: {
-            fontWeight: 'normal',
+            // fontWeight: 'normal',
             fontSize: 12,
             color: '#333'
           },

@@ -2,5 +2,5 @@
 export function buyfilter(code) {
   const arr = ['成功', '失败', '待定'];
   let index = code * 1;
-  return arr[index];
+  return arr[index] || '-';
 }

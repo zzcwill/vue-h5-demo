@@ -5,19 +5,11 @@ const chart2 = () => import('@/views/demo/chart/chart2');
 const chart3 = () => import('@/views/demo/chart/chart3');
 const chart4 = () => import('@/views/demo/chart/chart4');
 
-const ajax = () => import('@/views/demo/ajax');
 const store = () => import('@/views/demo/store');
-const store2 = () => import('@/views/demo/store2');
-
-const filter = () => import('@/views/demo/filter');
-
-const img = () => import('@/views/demo/img');
 
 const ref = () => import('@/views/demo/ref');
 
 const sync = () => import('@/views/demo/sync');
-
-const popup = () => import('@/views/demo/popup');
 
 const demoRoute = [
   {
@@ -47,29 +39,9 @@ const demoRoute = [
     component: chart4
   },
   {
-    path: '/demo/ajax',
-    name: 'ajax',
-    component: ajax
-  },
-  {
     path: '/demo/store',
     name: 'store',
     component: store
-  },
-  {
-    path: '/demo/store2',
-    name: 'store2',
-    component: store2
-  },
-  {
-    path: '/demo/filter',
-    name: 'filter',
-    component: filter
-  },
-  {
-    path: '/demo/img',
-    name: 'img',
-    component: img
   },
   {
     path: '/demo/ref',
@@ -80,11 +52,6 @@ const demoRoute = [
     path: '/demo/sync',
     name: 'sync',
     component: sync
-  },
-  {
-    path: '/demo/popup',
-    name: 'popup',
-    component: popup
   }
 ];
 

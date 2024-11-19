@@ -6,6 +6,6 @@
 - nvm use 18.20.2
 
 # dev
-- pnpm i
+- yarn install
 - pnpm dev
 - pnpm build

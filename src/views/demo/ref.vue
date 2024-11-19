@@ -8,6 +8,7 @@
 
 <script>
 import record from '@/components/record';
+import lodash from 'lodash';
 
 export default {
   name: 'refPage',
@@ -19,15 +20,10 @@ export default {
   components: {
     record
   },
-  filters: {
-    codeFilter: function (value) {
-      let arr = ['no', 'yes'];
-      return arr[value] || '-';
-    }
-  },
+  filters: {},
   created() {},
   mounted() {},
-  destoryed() {},
+  destroyed() {},
   methods: {
     getRecord() {
       // 获取dom
@@ -38,7 +34,8 @@ export default {
       console.info('----');
       // 获取子组件方法
       this.$refs.refRecord.getData();
-      console.info(this.$refs.refRecord.numData);
+      const numData = lodash.cloneDeep(this.$refs.refRecord.numData);
+      console.info('numData', numData);
     }
   }
 };

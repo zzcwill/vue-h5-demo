@@ -1,5 +1,5 @@
 <template>
-  <div class="demo">
+  <div class="demo" v-if="isLogin">
     <div v-for="(item, index) in routes" :key="index" class="item">
       <div @click="toRouter(item)">{{ item.name }}</div>
       <div class="dot"></div>
@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex';
+
 export default {
   name: 'demo',
   components: {},
@@ -36,32 +38,9 @@ export default {
           path: '/demo/chart4',
           query: {}
         },
-
-        {
-          name: 'ajax',
-          path: '/demo/ajax',
-          query: {
-            code: 'test'
-          }
-        },
         {
           name: 'store',
           path: '/demo/store',
-          query: {}
-        },
-        {
-          name: 'store2',
-          path: '/demo/store2',
-          query: {}
-        },
-        {
-          name: 'filter',
-          path: '/demo/filter',
-          query: {}
-        },
-        {
-          name: 'img',
-          path: '/demo/img',
           query: {}
         },
         {
@@ -73,14 +52,12 @@ export default {
           name: 'sync',
           path: '/demo/sync',
           query: {}
-        },
-        {
-          name: 'popup',
-          path: '/demo/popup',
-          query: {}
         }
       ]
     };
+  },
+  computed: {
+    ...mapGetters(['isLogin'])
   },
   created() {},
   mounted() {},
